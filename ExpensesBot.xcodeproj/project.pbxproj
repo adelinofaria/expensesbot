@@ -15,6 +15,16 @@
 		C6B51C282C458369000FC7FA /* ExpensesBotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C272C458369000FC7FA /* ExpensesBotTests.swift */; };
 		C6B51C322C458369000FC7FA /* ExpensesBotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C312C458369000FC7FA /* ExpensesBotUITests.swift */; };
 		C6B51C342C458369000FC7FA /* ExpensesBotUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C332C458369000FC7FA /* ExpensesBotUITestsLaunchTests.swift */; };
+		C6B51C462C4585FE000FC7FA /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = C6B51C452C4585FE000FC7FA /* Localizable.xcstrings */; };
+		C6B51C482C45867D000FC7FA /* RootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C472C45867D000FC7FA /* RootScreen.swift */; };
+		C6B51C4B2C458888000FC7FA /* ListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C4A2C458888000FC7FA /* ListScreen.swift */; };
+		C6B51C4D2C45889A000FC7FA /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C4C2C45889A000FC7FA /* DetailScreen.swift */; };
+		C6B51C4F2C4588FB000FC7FA /* CameraScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C4E2C4588FB000FC7FA /* CameraScreen.swift */; };
+		C6B51C512C45891C000FC7FA /* ExpenseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C502C45891C000FC7FA /* ExpenseScreen.swift */; };
+		C6B51C532C458F31000FC7FA /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C522C458F31000FC7FA /* HomeScreen.swift */; };
+		C6B51C552C459061000FC7FA /* ExpenseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C542C459061000FC7FA /* ExpenseModel.swift */; };
+		C6B51C592C4596F1000FC7FA /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C582C4596F1000FC7FA /* ListView.swift */; };
+		C6B51C5B2C45A93C000FC7FA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C5A2C45A93C000FC7FA /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +56,19 @@
 		C6B51C2D2C458369000FC7FA /* ExpensesBotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpensesBotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6B51C312C458369000FC7FA /* ExpensesBotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesBotUITests.swift; sourceTree = "<group>"; };
 		C6B51C332C458369000FC7FA /* ExpensesBotUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesBotUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C6B51C452C4585FE000FC7FA /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		C6B51C472C45867D000FC7FA /* RootScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreen.swift; sourceTree = "<group>"; };
+		C6B51C492C4586BD000FC7FA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		C6B51C4A2C458888000FC7FA /* ListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScreen.swift; sourceTree = "<group>"; };
+		C6B51C4C2C45889A000FC7FA /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
+		C6B51C4E2C4588FB000FC7FA /* CameraScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraScreen.swift; sourceTree = "<group>"; };
+		C6B51C502C45891C000FC7FA /* ExpenseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseScreen.swift; sourceTree = "<group>"; };
+		C6B51C522C458F31000FC7FA /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		C6B51C542C459061000FC7FA /* ExpenseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseModel.swift; sourceTree = "<group>"; };
+		C6B51C562C459590000FC7FA /* ExpensesBot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ExpensesBot.entitlements; sourceTree = "<group>"; };
+		C6B51C572C4595CB000FC7FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C6B51C582C4596F1000FC7FA /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		C6B51C5A2C45A93C000FC7FA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,10 +119,13 @@
 		C6B51C132C458364000FC7FA /* ExpensesBot */ = {
 			isa = PBXGroup;
 			children = (
-				C6B51C142C458364000FC7FA /* ExpensesBotApp.swift */,
 				C6B51C162C458364000FC7FA /* ContentView.swift */,
-				C6B51C182C458364000FC7FA /* Item.swift */,
-				C6B51C1A2C458368000FC7FA /* Assets.xcassets */,
+				C6B51C142C458364000FC7FA /* ExpensesBotApp.swift */,
+				C6B51C402C458572000FC7FA /* Models */,
+				C6B51C412C45857B000FC7FA /* Screens */,
+				C6B51C422C458584000FC7FA /* ViewModels */,
+				C6B51C432C458591000FC7FA /* Views */,
+				C6B51C442C4585A2000FC7FA /* Supporting Files */,
 				C6B51C1C2C458368000FC7FA /* Preview Content */,
 			);
 			path = ExpensesBot;
@@ -128,6 +154,56 @@
 				C6B51C332C458369000FC7FA /* ExpensesBotUITestsLaunchTests.swift */,
 			);
 			path = ExpensesBotUITests;
+			sourceTree = "<group>";
+		};
+		C6B51C402C458572000FC7FA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C6B51C182C458364000FC7FA /* Item.swift */,
+				C6B51C542C459061000FC7FA /* ExpenseModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C6B51C412C45857B000FC7FA /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				C6B51C472C45867D000FC7FA /* RootScreen.swift */,
+				C6B51C522C458F31000FC7FA /* HomeScreen.swift */,
+				C6B51C4A2C458888000FC7FA /* ListScreen.swift */,
+				C6B51C4C2C45889A000FC7FA /* DetailScreen.swift */,
+				C6B51C4E2C4588FB000FC7FA /* CameraScreen.swift */,
+				C6B51C502C45891C000FC7FA /* ExpenseScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		C6B51C422C458584000FC7FA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C6B51C432C458591000FC7FA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C6B51C582C4596F1000FC7FA /* ListView.swift */,
+				C6B51C5A2C45A93C000FC7FA /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C6B51C442C4585A2000FC7FA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C6B51C1A2C458368000FC7FA /* Assets.xcassets */,
+				C6B51C562C459590000FC7FA /* ExpensesBot.entitlements */,
+				C6B51C572C4595CB000FC7FA /* Info.plist */,
+				C6B51C452C4585FE000FC7FA /* Localizable.xcstrings */,
+				C6B51C492C4586BD000FC7FA /* README.md */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +312,7 @@
 			files = (
 				C6B51C1E2C458368000FC7FA /* Preview Assets.xcassets in Resources */,
 				C6B51C1B2C458368000FC7FA /* Assets.xcassets in Resources */,
+				C6B51C462C4585FE000FC7FA /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,9 +337,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6B51C4B2C458888000FC7FA /* ListScreen.swift in Sources */,
 				C6B51C172C458364000FC7FA /* ContentView.swift in Sources */,
+				C6B51C4F2C4588FB000FC7FA /* CameraScreen.swift in Sources */,
+				C6B51C4D2C45889A000FC7FA /* DetailScreen.swift in Sources */,
 				C6B51C192C458364000FC7FA /* Item.swift in Sources */,
+				C6B51C532C458F31000FC7FA /* HomeScreen.swift in Sources */,
 				C6B51C152C458364000FC7FA /* ExpensesBotApp.swift in Sources */,
+				C6B51C512C45891C000FC7FA /* ExpenseScreen.swift in Sources */,
+				C6B51C592C4596F1000FC7FA /* ListView.swift in Sources */,
+				C6B51C5B2C45A93C000FC7FA /* HomeView.swift in Sources */,
+				C6B51C552C459061000FC7FA /* ExpenseModel.swift in Sources */,
+				C6B51C482C45867D000FC7FA /* RootScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,11 +509,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = ExpensesBot/ExpensesBot.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ExpensesBot/Preview Content\"";
+				DEVELOPMENT_TEAM = C25FQUKVZL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExpensesBot/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "The app uses the camera to a picture for your expense report";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -438,7 +527,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.adelinofaria.ExpensesBot;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adelinofaria.${PRODUCT_NAME:lower}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -451,11 +540,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = ExpensesBot/ExpensesBot.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ExpensesBot/Preview Content\"";
+				DEVELOPMENT_TEAM = C25FQUKVZL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExpensesBot/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "The app uses the camera to a picture for your expense report";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -466,7 +558,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.adelinofaria.ExpensesBot;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adelinofaria.${PRODUCT_NAME:lower}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -484,7 +576,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.adelinofaria.ExpensesBotTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adelinofaria.${PRODUCT_NAME:lower}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -503,7 +595,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.adelinofaria.ExpensesBotTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adelinofaria.${PRODUCT_NAME:lower}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -520,7 +612,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.adelinofaria.ExpensesBotUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adelinofaria.${PRODUCT_NAME:lower}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -537,7 +629,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.adelinofaria.ExpensesBotUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adelinofaria.${PRODUCT_NAME:lower}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;

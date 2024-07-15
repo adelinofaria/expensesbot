@@ -12,7 +12,7 @@ import SwiftData
 struct ExpensesBotApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            ExpenseModel.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -25,7 +25,7 @@ struct ExpensesBotApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootScreen()
         }
         .modelContainer(sharedModelContainer)
     }

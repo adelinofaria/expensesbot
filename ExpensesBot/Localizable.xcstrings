@@ -1,0 +1,30 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Add Item" : {
+
+    },
+    "Expenses Bot++" : {
+
+    },
+    "Hello, World!" : {
+
+    },
+    "History" : {
+
+    },
+    "Home" : {
+
+    },
+    "Item at %@" : {
+
+    },
+    "New Expense 📸" : {
+
+    },
+    "Select an item" : {
+
+    }
+  },
+  "version" : "1.0"
+}
