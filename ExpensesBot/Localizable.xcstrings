@@ -1,13 +1,28 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "Add Item" : {
+    "📸" : {
+
+    },
+    "🖼️" : {
+
+    },
+    "Cancel" : {
+
+    },
+    "Currency" : {
+
+    },
+    "Description" : {
+
+    },
+    "Enter description" : {
+
+    },
+    "Expense total value" : {
 
     },
     "Expenses Bot++" : {
-
-    },
-    "Hello, World!" : {
 
     },
     "History" : {
@@ -16,13 +31,22 @@
     "Home" : {
 
     },
-    "Item at %@" : {
+    "id" : {
 
     },
-    "New Expense 📸" : {
+    "Info" : {
 
     },
-    "Select an item" : {
+    "New Expense" : {
+
+    },
+    "Save" : {
+
+    },
+    "Timestamp" : {
+
+    },
+    "Total value" : {
 
     }
   },

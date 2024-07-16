@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C6B51C152C458364000FC7FA /* ExpensesBotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C142C458364000FC7FA /* ExpensesBotApp.swift */; };
-		C6B51C172C458364000FC7FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C162C458364000FC7FA /* ContentView.swift */; };
-		C6B51C192C458364000FC7FA /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C182C458364000FC7FA /* Item.swift */; };
 		C6B51C1B2C458368000FC7FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6B51C1A2C458368000FC7FA /* Assets.xcassets */; };
 		C6B51C1E2C458368000FC7FA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6B51C1D2C458368000FC7FA /* Preview Assets.xcassets */; };
 		C6B51C282C458369000FC7FA /* ExpensesBotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C272C458369000FC7FA /* ExpensesBotTests.swift */; };
@@ -19,12 +17,15 @@
 		C6B51C482C45867D000FC7FA /* RootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C472C45867D000FC7FA /* RootScreen.swift */; };
 		C6B51C4B2C458888000FC7FA /* ListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C4A2C458888000FC7FA /* ListScreen.swift */; };
 		C6B51C4D2C45889A000FC7FA /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C4C2C45889A000FC7FA /* DetailScreen.swift */; };
-		C6B51C4F2C4588FB000FC7FA /* CameraScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C4E2C4588FB000FC7FA /* CameraScreen.swift */; };
-		C6B51C512C45891C000FC7FA /* ExpenseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C502C45891C000FC7FA /* ExpenseScreen.swift */; };
+		C6B51C512C45891C000FC7FA /* NewExpenseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C502C45891C000FC7FA /* NewExpenseScreen.swift */; };
 		C6B51C532C458F31000FC7FA /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C522C458F31000FC7FA /* HomeScreen.swift */; };
 		C6B51C552C459061000FC7FA /* ExpenseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C542C459061000FC7FA /* ExpenseModel.swift */; };
 		C6B51C592C4596F1000FC7FA /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C582C4596F1000FC7FA /* ListView.swift */; };
 		C6B51C5B2C45A93C000FC7FA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C5A2C45A93C000FC7FA /* HomeView.swift */; };
+		C6B51C5D2C45BC7C000FC7FA /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C5C2C45BC7C000FC7FA /* CameraView.swift */; };
+		C6B51C5F2C466479000FC7FA /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C5E2C466479000FC7FA /* DetailView.swift */; };
+		C6B51C612C46656F000FC7FA /* NewExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C602C46656F000FC7FA /* NewExpenseView.swift */; };
+		C6B51C632C466600000FC7FA /* ImageSourcePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C622C466600000FC7FA /* ImageSourcePickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +48,6 @@
 /* Begin PBXFileReference section */
 		C6B51C112C458364000FC7FA /* ExpensesBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpensesBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6B51C142C458364000FC7FA /* ExpensesBotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesBotApp.swift; sourceTree = "<group>"; };
-		C6B51C162C458364000FC7FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		C6B51C182C458364000FC7FA /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		C6B51C1A2C458368000FC7FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6B51C1D2C458368000FC7FA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C6B51C232C458369000FC7FA /* ExpensesBotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpensesBotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,14 +60,17 @@
 		C6B51C492C4586BD000FC7FA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		C6B51C4A2C458888000FC7FA /* ListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScreen.swift; sourceTree = "<group>"; };
 		C6B51C4C2C45889A000FC7FA /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
-		C6B51C4E2C4588FB000FC7FA /* CameraScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraScreen.swift; sourceTree = "<group>"; };
-		C6B51C502C45891C000FC7FA /* ExpenseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseScreen.swift; sourceTree = "<group>"; };
+		C6B51C502C45891C000FC7FA /* NewExpenseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExpenseScreen.swift; sourceTree = "<group>"; };
 		C6B51C522C458F31000FC7FA /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		C6B51C542C459061000FC7FA /* ExpenseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseModel.swift; sourceTree = "<group>"; };
 		C6B51C562C459590000FC7FA /* ExpensesBot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ExpensesBot.entitlements; sourceTree = "<group>"; };
 		C6B51C572C4595CB000FC7FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C6B51C582C4596F1000FC7FA /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		C6B51C5A2C45A93C000FC7FA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C6B51C5C2C45BC7C000FC7FA /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		C6B51C5E2C466479000FC7FA /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		C6B51C602C46656F000FC7FA /* NewExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExpenseView.swift; sourceTree = "<group>"; };
+		C6B51C622C466600000FC7FA /* ImageSourcePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSourcePickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +121,6 @@
 		C6B51C132C458364000FC7FA /* ExpensesBot */ = {
 			isa = PBXGroup;
 			children = (
-				C6B51C162C458364000FC7FA /* ContentView.swift */,
 				C6B51C142C458364000FC7FA /* ExpensesBotApp.swift */,
 				C6B51C402C458572000FC7FA /* Models */,
 				C6B51C412C45857B000FC7FA /* Screens */,
@@ -159,7 +160,6 @@
 		C6B51C402C458572000FC7FA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C6B51C182C458364000FC7FA /* Item.swift */,
 				C6B51C542C459061000FC7FA /* ExpenseModel.swift */,
 			);
 			path = Models;
@@ -172,8 +172,7 @@
 				C6B51C522C458F31000FC7FA /* HomeScreen.swift */,
 				C6B51C4A2C458888000FC7FA /* ListScreen.swift */,
 				C6B51C4C2C45889A000FC7FA /* DetailScreen.swift */,
-				C6B51C4E2C4588FB000FC7FA /* CameraScreen.swift */,
-				C6B51C502C45891C000FC7FA /* ExpenseScreen.swift */,
+				C6B51C502C45891C000FC7FA /* NewExpenseScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -188,8 +187,12 @@
 		C6B51C432C458591000FC7FA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C6B51C582C4596F1000FC7FA /* ListView.swift */,
 				C6B51C5A2C45A93C000FC7FA /* HomeView.swift */,
+				C6B51C582C4596F1000FC7FA /* ListView.swift */,
+				C6B51C5E2C466479000FC7FA /* DetailView.swift */,
+				C6B51C602C46656F000FC7FA /* NewExpenseView.swift */,
+				C6B51C622C466600000FC7FA /* ImageSourcePickerView.swift */,
+				C6B51C5C2C45BC7C000FC7FA /* CameraView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -338,13 +341,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6B51C4B2C458888000FC7FA /* ListScreen.swift in Sources */,
-				C6B51C172C458364000FC7FA /* ContentView.swift in Sources */,
-				C6B51C4F2C4588FB000FC7FA /* CameraScreen.swift in Sources */,
+				C6B51C612C46656F000FC7FA /* NewExpenseView.swift in Sources */,
+				C6B51C5D2C45BC7C000FC7FA /* CameraView.swift in Sources */,
 				C6B51C4D2C45889A000FC7FA /* DetailScreen.swift in Sources */,
-				C6B51C192C458364000FC7FA /* Item.swift in Sources */,
 				C6B51C532C458F31000FC7FA /* HomeScreen.swift in Sources */,
 				C6B51C152C458364000FC7FA /* ExpensesBotApp.swift in Sources */,
-				C6B51C512C45891C000FC7FA /* ExpenseScreen.swift in Sources */,
+				C6B51C632C466600000FC7FA /* ImageSourcePickerView.swift in Sources */,
+				C6B51C5F2C466479000FC7FA /* DetailView.swift in Sources */,
+				C6B51C512C45891C000FC7FA /* NewExpenseScreen.swift in Sources */,
 				C6B51C592C4596F1000FC7FA /* ListView.swift in Sources */,
 				C6B51C5B2C45A93C000FC7FA /* HomeView.swift in Sources */,
 				C6B51C552C459061000FC7FA /* ExpenseModel.swift in Sources */,

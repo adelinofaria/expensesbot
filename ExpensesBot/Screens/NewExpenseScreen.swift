@@ -1,5 +1,5 @@
 //
-//  ListScreen.swift
+//  NewExpenseScreen.swift
 //  ExpensesBot
 //
 //  Created by Adelino Faria on 15/07/2024.
@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct ListScreen: View {
+struct NewExpenseScreen: View {
     var body: some View {
-        ListView()
+        NewExpenseView()
     }
 }
 
 #Preview {
-    ListScreen()
+    NewExpenseScreen()
         .modelContainer(for: ExpenseModel.self, inMemory: true)
 }

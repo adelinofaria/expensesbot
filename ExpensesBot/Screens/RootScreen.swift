@@ -30,4 +30,5 @@ struct RootScreen: View {
 
 #Preview {
     RootScreen()
+        .modelContainer(for: ExpenseModel.self, inMemory: true)
 }

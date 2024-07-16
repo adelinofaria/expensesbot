@@ -15,4 +15,5 @@ struct HomeScreen: View {
 
 #Preview {
     HomeScreen()
+        .modelContainer(for: ExpenseModel.self, inMemory: true)
 }

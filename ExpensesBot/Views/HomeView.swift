@@ -8,26 +8,40 @@
 import SwiftUI
 
 struct HomeView: View {
-    
-    @Environment(\.modelContext) private var modelContext
+
+    @State private var presentNewExpenseScreen = false
 
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-        Button(action: {
-            let model = ExpenseModel(id: UUID(),
-                                     imageData: Data(),
-                                     timestamp: .now,
-                                     total: 123.23,
-                                     currency: "USD",
-                                     expenseDescription: "whole expense description")
 
-            modelContext.insert(model)
-        }) {
-            Label("New Expense 📸", systemImage: "camera.viewfinder")
+        Button {
+            self.presentNewExpenseScreen.toggle()
+        } label: {
+            Label("New Expense", systemImage: "plus")
         }
+        .sheet(isPresented: self.$presentNewExpenseScreen,
+               onDismiss: didDismiss) {
+            NavigationStack {
+                NewExpenseScreen()
+                    .navigationTitle("New Expense")
+                    .toolbar {
+                        ToolbarItem(placement: .topBarLeading) {
+                            Button {
+                                self.presentNewExpenseScreen.toggle()
+                            } label: {
+                                Text("Cancel")
+                            }
+                        }
+                    }
+            }
+        }
+    }
+
+    func didDismiss() {
+
     }
 }
 
 #Preview {
     HomeView()
+        .modelContainer(for: ExpenseModel.self, inMemory: true)
 }
