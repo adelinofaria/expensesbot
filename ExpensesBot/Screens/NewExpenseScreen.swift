@@ -8,12 +8,10 @@
 import SwiftUI
 
 struct NewExpenseScreen: View {
-    var body: some View {
-        NewExpenseView()
-    }
-}
 
-#Preview {
-    NewExpenseScreen()
-        .modelContainer(for: ExpenseModel.self, inMemory: true)
+    @Binding var isPresented: Bool
+
+    var body: some View {
+        NewExpenseView(isPresented: self.$isPresented)
+    }
 }

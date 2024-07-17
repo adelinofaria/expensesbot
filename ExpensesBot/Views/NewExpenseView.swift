@@ -11,6 +11,8 @@ struct NewExpenseView: View {
 
     @Environment(\.modelContext) private var modelContext
 
+    @Binding var isPresented: Bool
+
     @State private var presentImageSourcePickerView = false
     @State private var image: UIImage?
 
@@ -22,28 +24,33 @@ struct NewExpenseView: View {
 
     var body: some View {
         Form {
-            Button {
-                self.presentImageSourcePickerView.toggle()
-            } label: {
-                if let image {
-                    Image(uiImage: image)
-                        .resizable()
-                        .scaledToFit()
-                } else {
-                    Image(systemName: "photo")
-                        .font(.largeTitle)
-                        .foregroundStyle(.secondary)
-                        .frame(height: 200)
-                }
-            }
-            .sheet(isPresented: self.$presentImageSourcePickerView) {
-                ImageSourcePickerView(selectedImage: $image)
-            }
             Section {
-                LabeledContent("id", value: self.id.uuidString)
-                LabeledContent("Timestamp", value: self.timestamp.description)
-            } header: {
-                Text("Info")
+                Button {
+                    self.presentImageSourcePickerView.toggle()
+                } label: {
+                    HStack {
+                        VStack {
+                            if let image {
+                                Image(uiImage: image)
+                                    .resizable()
+                                    .scaledToFit()
+                            } else {
+                                Image(systemName: "photo")
+                                    .font(.largeTitle)
+                                Spacer()
+                                Text("Select your image")
+                                    .font(.subheadline)
+                            }
+                        }
+                        .padding()
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                }
+                .sheet(isPresented: self.$presentImageSourcePickerView) {
+                    ImageSourcePickerView(isPresented: self.$presentImageSourcePickerView, image: $image)
+                        .presentationDetents([.fraction(0.25)])
+                        .presentationDragIndicator(.hidden)
+                }
             }
             Section {
                 TextField("Expense total value", value: $total, format: .number)
@@ -52,7 +59,6 @@ struct NewExpenseView: View {
                         Text($0)
                     }
                 }
-
             } header: {
                 Text("Total value")
             }
@@ -69,8 +75,15 @@ struct NewExpenseView: View {
                 Text("Description")
             }
             Section {
-
-                Button("Save") {
+                LabeledContent("id", value: self.id.uuidString)
+                LabeledContent("Timestamp", value: self.timestamp.description)
+            } header: {
+                Text("Generated")
+            }
+        }
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
                     if let imageData = self.image?.jpegData(compressionQuality: 1), let total {
 
                         let model = ExpenseModel(id: self.id,
@@ -82,35 +95,15 @@ struct NewExpenseView: View {
 
                         modelContext.insert(model)
                     }
+                    
+                    self.isPresented.toggle()
+                } label: {
+                    Text("Done")
                 }
-                .buttonStyle(PlainButtonStyle())
-                .disabled(self.total == nil || self.image == nil)
-                Button("Cancel") {
-
-                }
-                .buttonStyle(PlainButtonStyle())
-                Button("Cancel") {
-
-                }
+                .bold()
                 .buttonStyle(DefaultButtonStyle())
-                Button("Cancel") {
-
-                }
-                .buttonStyle(BorderedButtonStyle())
-                Button("Cancel") {
-
-                }
-                .buttonStyle(BorderlessButtonStyle())
-                Button("Cancel") {
-
-                }
-                .buttonStyle(BorderedProminentButtonStyle())
+                .disabled(self.total == nil || self.image == nil)
             }
         }
     }
-}
-
-#Preview {
-    NewExpenseView()
-        .modelContainer(for: ExpenseModel.self, inMemory: true)
 }

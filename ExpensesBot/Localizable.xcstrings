@@ -1,10 +1,7 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "📸" : {
-
-    },
-    "🖼️" : {
+    "Camera" : {
 
     },
     "Cancel" : {
@@ -16,6 +13,9 @@
     "Description" : {
 
     },
+    "Done" : {
+
+    },
     "Enter description" : {
 
     },
@@ -23,6 +23,9 @@
 
     },
     "Expenses Bot++" : {
+
+    },
+    "Generated" : {
 
     },
     "History" : {
@@ -34,13 +37,13 @@
     "id" : {
 
     },
-    "Info" : {
-
-    },
     "New Expense" : {
 
     },
-    "Save" : {
+    "Photo library" : {
+
+    },
+    "Select your image" : {
 
     },
     "Timestamp" : {

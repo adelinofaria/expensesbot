@@ -9,24 +9,24 @@ import SwiftUI
 
 struct HomeView: View {
 
-    @State private var presentNewExpenseScreen = false
+    @State private var newExpenseScreenIsPresented = false
 
     var body: some View {
 
         Button {
-            self.presentNewExpenseScreen.toggle()
+            self.newExpenseScreenIsPresented.toggle()
         } label: {
             Label("New Expense", systemImage: "plus")
         }
-        .sheet(isPresented: self.$presentNewExpenseScreen,
+        .sheet(isPresented: self.$newExpenseScreenIsPresented,
                onDismiss: didDismiss) {
             NavigationStack {
-                NewExpenseScreen()
+                NewExpenseScreen(isPresented: self.$newExpenseScreenIsPresented)
                     .navigationTitle("New Expense")
                     .toolbar {
                         ToolbarItem(placement: .topBarLeading) {
                             Button {
-                                self.presentNewExpenseScreen.toggle()
+                                self.newExpenseScreenIsPresented.toggle()
                             } label: {
                                 Text("Cancel")
                             }

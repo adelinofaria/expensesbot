@@ -28,7 +28,6 @@ struct CameraView: UIViewControllerRepresentable {
     }
 
     func updateUIViewController(_ uiViewController: Self.UIViewControllerType, context: Self.Context) {
-
     }
 
     typealias Coordinator = CameraViewCoordinator
@@ -46,7 +45,8 @@ class CameraViewCoordinator: NSObject, UINavigationControllerDelegate, UIImagePi
         self.picker = picker
     }
 
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let image = info[.originalImage] as? UIImage else { return }
         self.picker.image = image
         self.picker.isPresented.wrappedValue.dismiss()

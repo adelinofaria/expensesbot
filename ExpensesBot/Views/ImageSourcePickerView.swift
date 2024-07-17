@@ -10,34 +10,37 @@ import PhotosUI
 
 struct ImageSourcePickerView: View {
 
-    @Binding var selectedImage: UIImage?
+    @Binding var isPresented: Bool
+    @Binding var image: UIImage?
 
-    @State private var presentCameraView = false
+    @State private var cameraViewIsPresented = false
     @State private var photosPickerItem: PhotosPickerItem?
-    @State private var image: UIImage?
 
     var body: some View {
         HStack {
-            if let image {
-                Image(uiImage: image)
-                    .resizable()
-                    .scaledToFit()
+            Button {
+                self.cameraViewIsPresented.toggle()
+            } label: {
+                Label("Camera", systemImage: "camera")
             }
-            Button("📸") {
-                self.presentCameraView.toggle()
-            }
-            .fullScreenCover(isPresented: self.$presentCameraView) {
+            .fullScreenCover(isPresented: self.$cameraViewIsPresented) {
                 CameraView(image: self.$image)
             }
-            PhotosPicker("🖼️", selection: $photosPickerItem, matching: .images)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+            Divider()
+            PhotosPicker(selection: $photosPickerItem, matching: .images) {
+                Label("Photo library", systemImage: "photo")
+            }
             .onChange(of: self.photosPickerItem) {
                 Task {
                     if let loaded = try? await self.photosPickerItem?.loadTransferable(type: Image.self) {
                         self.image = ImageRenderer(content: loaded).uiImage
                     }
+
+                    self.isPresented.toggle()
                 }
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
         }
-        .frame(height: 100)
     }
 }
