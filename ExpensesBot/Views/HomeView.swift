@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import Charts
 
 struct HomeView: View {
 
@@ -17,32 +18,19 @@ struct HomeView: View {
     @State private var newExpenseScreenIsPresented = false
 
     var body: some View {
-        let totalsPerCurrencies = self.items.reduce([String: [ExpenseModel]]()) { partialResult, expense in
-
-            var partialResult = partialResult
-            var items = partialResult[expense.currency] ?? []
-
-            items.append(expense)
-
-            partialResult[expense.currency] = items
-
-            return partialResult
-        }.map {
-            let total = $0.value.reduce(Double()) { partialResult, expense in
-                partialResult + expense.total
-            }
-            return (key: $0.key, value: total)
-        }
-
         ScrollView {
             VStack(alignment: .leading) {
-                Spacer()
                 Text("Total Expenses")
                     .font(.title)
                 Spacer()
-                ForEach(totalsPerCurrencies, id: \.key) {
-                    Text($0.value, format: .currency(code: $0.key))
-                        .font(.subheadline)
+                Chart {
+                    ForEach(self.items) { item in
+                        BarMark(
+                            x: .value("Currency", item.currency),
+                            y: .value("Total", item.total)
+                        )
+                        .foregroundStyle(Color.random())
+                    }
                 }
             }
             .padding()
@@ -57,8 +45,7 @@ struct HomeView: View {
         }
         .padding()
         .buttonStyle(BorderedProminentButtonStyle())
-        .sheet(isPresented: self.$newExpenseScreenIsPresented,
-               onDismiss: didDismiss) {
+        .sheet(isPresented: self.$newExpenseScreenIsPresented) {
             NavigationStack {
                 NewExpenseScreen(isPresented: self.$newExpenseScreenIsPresented)
                     .navigationTitle("New Expense")
@@ -73,10 +60,6 @@ struct HomeView: View {
                     }
             }
         }
-    }
-
-    func didDismiss() {
-
     }
 }
 

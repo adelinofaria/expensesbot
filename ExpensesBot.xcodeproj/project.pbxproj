@@ -29,6 +29,7 @@
 		C6B51C662C485FB2000FC7FA /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C652C485FB2000FC7FA /* UIImage+Resize.swift */; };
 		C6B51C682C4871B4000FC7FA /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C672C4871B4000FC7FA /* ListViewCell.swift */; };
 		C6B51C6A2C487CA8000FC7FA /* DateFormatter+Reuse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C692C487CA8000FC7FA /* DateFormatter+Reuse.swift */; };
+		C6B51C6C2C497AEA000FC7FA /* Color+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C6B2C497AEA000FC7FA /* Color+Random.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		C6B51C652C485FB2000FC7FA /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 		C6B51C672C4871B4000FC7FA /* ListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
 		C6B51C692C487CA8000FC7FA /* DateFormatter+Reuse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Reuse.swift"; sourceTree = "<group>"; };
+		C6B51C6B2C497AEA000FC7FA /* Color+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Random.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,8 +222,9 @@
 		C6B51C642C485F97000FC7FA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				C6B51C652C485FB2000FC7FA /* UIImage+Resize.swift */,
+				C6B51C6B2C497AEA000FC7FA /* Color+Random.swift */,
 				C6B51C692C487CA8000FC7FA /* DateFormatter+Reuse.swift */,
+				C6B51C652C485FB2000FC7FA /* UIImage+Resize.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6B51C4B2C458888000FC7FA /* ListScreen.swift in Sources */,
+				C6B51C6C2C497AEA000FC7FA /* Color+Random.swift in Sources */,
 				C6B51C612C46656F000FC7FA /* NewExpenseView.swift in Sources */,
 				C6B51C5D2C45BC7C000FC7FA /* CameraView.swift in Sources */,
 				C6B51C4D2C45889A000FC7FA /* DetailScreen.swift in Sources */,
