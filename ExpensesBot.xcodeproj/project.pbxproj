@@ -26,6 +26,9 @@
 		C6B51C5F2C466479000FC7FA /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C5E2C466479000FC7FA /* DetailView.swift */; };
 		C6B51C612C46656F000FC7FA /* NewExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C602C46656F000FC7FA /* NewExpenseView.swift */; };
 		C6B51C632C466600000FC7FA /* ImageSourcePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C622C466600000FC7FA /* ImageSourcePickerView.swift */; };
+		C6B51C662C485FB2000FC7FA /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C652C485FB2000FC7FA /* UIImage+Resize.swift */; };
+		C6B51C682C4871B4000FC7FA /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C672C4871B4000FC7FA /* ListViewCell.swift */; };
+		C6B51C6A2C487CA8000FC7FA /* DateFormatter+Reuse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C692C487CA8000FC7FA /* DateFormatter+Reuse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		C6B51C5E2C466479000FC7FA /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		C6B51C602C46656F000FC7FA /* NewExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExpenseView.swift; sourceTree = "<group>"; };
 		C6B51C622C466600000FC7FA /* ImageSourcePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSourcePickerView.swift; sourceTree = "<group>"; };
+		C6B51C652C485FB2000FC7FA /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
+		C6B51C672C4871B4000FC7FA /* ListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
+		C6B51C692C487CA8000FC7FA /* DateFormatter+Reuse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Reuse.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				C6B51C142C458364000FC7FA /* ExpensesBotApp.swift */,
+				C6B51C642C485F97000FC7FA /* Extensions */,
 				C6B51C402C458572000FC7FA /* Models */,
 				C6B51C412C45857B000FC7FA /* Screens */,
 				C6B51C422C458584000FC7FA /* ViewModels */,
@@ -189,6 +196,7 @@
 			children = (
 				C6B51C5A2C45A93C000FC7FA /* HomeView.swift */,
 				C6B51C582C4596F1000FC7FA /* ListView.swift */,
+				C6B51C672C4871B4000FC7FA /* ListViewCell.swift */,
 				C6B51C5E2C466479000FC7FA /* DetailView.swift */,
 				C6B51C602C46656F000FC7FA /* NewExpenseView.swift */,
 				C6B51C622C466600000FC7FA /* ImageSourcePickerView.swift */,
@@ -207,6 +215,15 @@
 				C6B51C492C4586BD000FC7FA /* README.md */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C6B51C642C485F97000FC7FA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C6B51C652C485FB2000FC7FA /* UIImage+Resize.swift */,
+				C6B51C692C487CA8000FC7FA /* DateFormatter+Reuse.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,14 +362,17 @@
 				C6B51C5D2C45BC7C000FC7FA /* CameraView.swift in Sources */,
 				C6B51C4D2C45889A000FC7FA /* DetailScreen.swift in Sources */,
 				C6B51C532C458F31000FC7FA /* HomeScreen.swift in Sources */,
+				C6B51C6A2C487CA8000FC7FA /* DateFormatter+Reuse.swift in Sources */,
 				C6B51C152C458364000FC7FA /* ExpensesBotApp.swift in Sources */,
 				C6B51C632C466600000FC7FA /* ImageSourcePickerView.swift in Sources */,
+				C6B51C682C4871B4000FC7FA /* ListViewCell.swift in Sources */,
 				C6B51C5F2C466479000FC7FA /* DetailView.swift in Sources */,
 				C6B51C512C45891C000FC7FA /* NewExpenseScreen.swift in Sources */,
 				C6B51C592C4596F1000FC7FA /* ListView.swift in Sources */,
 				C6B51C5B2C45A93C000FC7FA /* HomeView.swift in Sources */,
 				C6B51C552C459061000FC7FA /* ExpenseModel.swift in Sources */,
 				C6B51C482C45867D000FC7FA /* RootScreen.swift in Sources */,
+				C6B51C662C485FB2000FC7FA /* UIImage+Resize.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

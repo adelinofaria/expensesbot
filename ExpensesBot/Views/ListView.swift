@@ -13,7 +13,7 @@ struct ListView: View {
     @Environment(\.isSearching) var isSearching
     @Environment(\.modelContext) private var modelContext
 
-    @Query(sort: \ExpenseModel.timestamp, order: .forward) private var items: [ExpenseModel]
+    @Query(sort: \ExpenseModel.timestamp, order: .reverse) private var items: [ExpenseModel]
 
     @State var searchText: String = ""
 
@@ -28,14 +28,16 @@ struct ListView: View {
         }
 
         List(items) { item in
-            NavigationLink {
-                DetailScreen(expense: item)
-            } label: {
-                Text(item.id.uuidString)
+            ListViewCell(expense: item)
+            .swipeActions {
+                Button("Delete", systemImage: "trash", role: .destructive) {
+                    modelContext.delete(item)
+                }
             }
         }
         .searchable(text: $searchText)
     }
+
 }
 
 #Preview {

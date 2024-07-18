@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 import SwiftData
 
 @Model
@@ -16,6 +17,20 @@ final class ExpenseModel {
     var total: Double
     var currency: String
     var expenseDescription: String
+
+    @Transient
+    var image: UIImage? {
+        get {
+            UIImage(data: self.imageData)
+        }
+    }
+
+    @Transient
+    var thumbnail: UIImage? {
+        get {
+            return self.image?.resized(maxSize: CGSize(width: 44.0, height: 44.0))
+        }
+    }
 
     init(id: UUID,
          imageData: Data,

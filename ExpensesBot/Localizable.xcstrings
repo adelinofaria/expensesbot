@@ -10,6 +10,9 @@
     "Currency" : {
 
     },
+    "Delete" : {
+
+    },
     "Description" : {
 
     },
@@ -37,6 +40,9 @@
     "id" : {
 
     },
+    "Info" : {
+
+    },
     "New Expense" : {
 
     },
@@ -47,6 +53,12 @@
 
     },
     "Timestamp" : {
+
+    },
+    "Total" : {
+
+    },
+    "Total Expenses" : {
 
     },
     "Total value" : {

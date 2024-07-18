@@ -11,10 +11,31 @@ struct DetailView: View {
     @Bindable var expense: ExpenseModel
 
     var body: some View {
-        Text(self.expense.id.uuidString)
-        Text(self.expense.timestamp.description)
-        Text(self.expense.total.description)
-        Text(self.expense.currency.description)
-        Text(self.expense.expenseDescription)
+        ScrollView {
+            VStack {
+                if let image = self.expense.image {
+                    Image(uiImage: image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                } else {
+                    Image(systemName: "photo")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                }
+                Spacer()
+                Text("Total")
+                    .bold()
+                Text(self.expense.total, format: .currency(code: self.expense.currency))
+                Spacer()
+                Text("Description")
+                    .bold()
+                Text(self.expense.expenseDescription)
+                Spacer()
+                Text("Info")
+                    .bold()
+                Text(self.expense.id.uuidString)
+                Text(self.expense.timestamp.description)
+            }
+        }
     }
 }

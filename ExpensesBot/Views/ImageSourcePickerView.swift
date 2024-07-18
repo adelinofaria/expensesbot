@@ -33,8 +33,8 @@ struct ImageSourcePickerView: View {
             }
             .onChange(of: self.photosPickerItem) {
                 Task {
-                    if let loaded = try? await self.photosPickerItem?.loadTransferable(type: Image.self) {
-                        self.image = ImageRenderer(content: loaded).uiImage
+                    if let data = try? await self.photosPickerItem?.loadTransferable(type: Data.self) {
+                        self.image = UIImage(data: data)
                     }
 
                     self.isPresented.toggle()
