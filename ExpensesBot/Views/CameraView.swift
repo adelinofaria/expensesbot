@@ -13,6 +13,12 @@ struct CameraView: UIViewControllerRepresentable {
 
     @Binding var image: UIImage?
 
+    // MARK: Public
+
+    static func isAvailable() -> Bool {
+        UIImagePickerController.isSourceTypeAvailable(.camera)
+    }
+
     // MARK: UIViewControllerRepresentable
 
     typealias UIViewControllerType = UIImagePickerController

@@ -13,24 +13,17 @@ struct NewExpenseView: View {
 
     @Binding var isPresented: Bool
 
-    @State private var presentImageSourcePickerView = false
-    @State private var image: UIImage?
-
-    @State private var id: UUID = .init()
-    @State private var timestamp: Date = .now
-    @State private var total: Double? = nil
-    @State private var currency: String = Locale.current.currency?.identifier ?? "USD"
-    @State private var expenseDescription: String = ""
+    @State private var viewModel = ViewModel()
 
     var body: some View {
         Form {
             Section {
                 Button {
-                    self.presentImageSourcePickerView.toggle()
+                    self.viewModel.presentImageSourcePickerView.toggle()
                 } label: {
                     HStack {
                         VStack {
-                            if let image {
+                            if let image = self.viewModel.image {
                                 Image(uiImage: image)
                                     .resizable()
                                     .scaledToFit()
@@ -46,15 +39,15 @@ struct NewExpenseView: View {
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                 }
-                .sheet(isPresented: self.$presentImageSourcePickerView) {
-                    ImageSourcePickerView(isPresented: self.$presentImageSourcePickerView, image: $image)
+                .sheet(isPresented: self.$viewModel.presentImageSourcePickerView) {
+                    ImageSourcePickerView(isPresented: self.$viewModel.presentImageSourcePickerView, image: self.$viewModel.image)
                         .presentationDetents([.fraction(0.25)])
                         .presentationDragIndicator(.hidden)
                 }
             }
             Section {
-                TextField("Expense total value", value: $total, format: .number)
-                Picker("Currency", selection: $currency) {
+                TextField("Expense total value", value: self.$viewModel.total, format: .number)
+                Picker("Currency", selection: self.$viewModel.currency) {
                     ForEach(Locale.commonISOCurrencyCodes, id: \.self) {
                         Text($0)
                     }
@@ -64,19 +57,19 @@ struct NewExpenseView: View {
             }
             Section {
                 ZStack(alignment: .leading) {
-                    if expenseDescription.isEmpty {
+                    if self.viewModel.expenseDescription.isEmpty {
                         Text("Enter description")
                             .foregroundStyle(.secondary)
                             .padding(.leading, 5)
                     }
-                    TextEditor(text: $expenseDescription)
+                    TextEditor(text: self.$viewModel.expenseDescription)
                 }
             } header: {
                 Text("Description")
             }
             Section {
-                LabeledContent("id", value: self.id.uuidString)
-                LabeledContent("Timestamp", value: self.timestamp.description)
+                LabeledContent("id", value: self.viewModel.id.uuidString)
+                LabeledContent("Timestamp", value: self.viewModel.timestamp.description)
             } header: {
                 Text("Generated")
             }
@@ -84,25 +77,14 @@ struct NewExpenseView: View {
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
-                    if let imageData = self.image?.jpegData(compressionQuality: 1), let total {
-
-                        let model = ExpenseModel(id: self.id,
-                                                 imageData: imageData,
-                                                 timestamp: self.timestamp,
-                                                 total: total,
-                                                 currency: self.currency,
-                                                 expenseDescription: self.expenseDescription)
-
-                        modelContext.insert(model)
-                    }
-                    
+                    self.viewModel.saveExpense(modelContext: modelContext)
                     self.isPresented.toggle()
                 } label: {
                     Text("Done")
                 }
                 .bold()
                 .buttonStyle(DefaultButtonStyle())
-                .disabled(self.total == nil || self.image == nil)
+                .disabled(self.viewModel.total == nil || self.viewModel.image == nil)
             }
         }
     }

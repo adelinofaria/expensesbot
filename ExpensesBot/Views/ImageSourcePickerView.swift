@@ -13,29 +13,28 @@ struct ImageSourcePickerView: View {
     @Binding var isPresented: Bool
     @Binding var image: UIImage?
 
-    @State private var cameraViewIsPresented = false
-    @State private var photosPickerItem: PhotosPickerItem?
+    @State private var viewModel = ViewModel()
 
     var body: some View {
         HStack {
-            Button {
-                self.cameraViewIsPresented.toggle()
-            } label: {
-                Label("Camera", systemImage: "camera")
+            if CameraView.isAvailable() {
+                Button {
+                    self.viewModel.cameraViewIsPresented.toggle()
+                } label: {
+                    Label("Camera", systemImage: "camera")
+                }
+                .fullScreenCover(isPresented: self.$viewModel.cameraViewIsPresented) {
+                    CameraView(image: self.$image)
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                Divider()
             }
-            .fullScreenCover(isPresented: self.$cameraViewIsPresented) {
-                CameraView(image: self.$image)
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
-            Divider()
-            PhotosPicker(selection: $photosPickerItem, matching: .images) {
+            PhotosPicker(selection: self.$viewModel.photosPickerItem, matching: .images) {
                 Label("Photo library", systemImage: "photo")
             }
-            .onChange(of: self.photosPickerItem) {
+            .onChange(of: self.viewModel.photosPickerItem) {
                 Task {
-                    if let data = try? await self.photosPickerItem?.loadTransferable(type: Data.self) {
-                        self.image = UIImage(data: data)
-                    }
+                    self.image = await self.viewModel.photosPickerLoadTransferable()
 
                     self.isPresented.toggle()
                 }

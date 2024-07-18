@@ -62,8 +62,3 @@ struct HomeView: View {
         }
     }
 }
-
-#Preview {
-    HomeView()
-        .modelContainer(for: ExpenseModel.self, inMemory: true)
-}

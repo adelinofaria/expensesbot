@@ -30,6 +30,15 @@
 		C6B51C682C4871B4000FC7FA /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C672C4871B4000FC7FA /* ListViewCell.swift */; };
 		C6B51C6A2C487CA8000FC7FA /* DateFormatter+Reuse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C692C487CA8000FC7FA /* DateFormatter+Reuse.swift */; };
 		C6B51C6C2C497AEA000FC7FA /* Color+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C6B2C497AEA000FC7FA /* Color+Random.swift */; };
+		C6B51C6E2C497FA7000FC7FA /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C6D2C497FA7000FC7FA /* ListViewModel.swift */; };
+		C6B51C702C4981AD000FC7FA /* NewExpenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C6F2C4981AD000FC7FA /* NewExpenseViewModel.swift */; };
+		C6B51C722C4986E9000FC7FA /* ImageSourcePickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C712C4986E9000FC7FA /* ImageSourcePickerViewModel.swift */; };
+		C6B51C742C499F3E000FC7FA /* ColorRandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C732C499F3E000FC7FA /* ColorRandomTests.swift */; };
+		C6B51C762C499F57000FC7FA /* DateFormatterReuseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C752C499F57000FC7FA /* DateFormatterReuseTests.swift */; };
+		C6B51C782C499F6D000FC7FA /* UIImageResizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C772C499F6D000FC7FA /* UIImageResizeTests.swift */; };
+		C6B51C7A2C499F82000FC7FA /* ListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C792C499F82000FC7FA /* ListViewModelTests.swift */; };
+		C6B51C7C2C499F9F000FC7FA /* NewExpenseViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C7B2C499F9F000FC7FA /* NewExpenseViewModelTests.swift */; };
+		C6B51C812C49BF1B000FC7FA /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B51C802C49BF1B000FC7FA /* UIImage+Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +88,15 @@
 		C6B51C672C4871B4000FC7FA /* ListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
 		C6B51C692C487CA8000FC7FA /* DateFormatter+Reuse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Reuse.swift"; sourceTree = "<group>"; };
 		C6B51C6B2C497AEA000FC7FA /* Color+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Random.swift"; sourceTree = "<group>"; };
+		C6B51C6D2C497FA7000FC7FA /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		C6B51C6F2C4981AD000FC7FA /* NewExpenseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExpenseViewModel.swift; sourceTree = "<group>"; };
+		C6B51C712C4986E9000FC7FA /* ImageSourcePickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSourcePickerViewModel.swift; sourceTree = "<group>"; };
+		C6B51C732C499F3E000FC7FA /* ColorRandomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorRandomTests.swift; sourceTree = "<group>"; };
+		C6B51C752C499F57000FC7FA /* DateFormatterReuseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterReuseTests.swift; sourceTree = "<group>"; };
+		C6B51C772C499F6D000FC7FA /* UIImageResizeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageResizeTests.swift; sourceTree = "<group>"; };
+		C6B51C792C499F82000FC7FA /* ListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelTests.swift; sourceTree = "<group>"; };
+		C6B51C7B2C499F9F000FC7FA /* NewExpenseViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExpenseViewModelTests.swift; sourceTree = "<group>"; };
+		C6B51C802C49BF1B000FC7FA /* UIImage+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +170,13 @@
 		C6B51C262C458369000FC7FA /* ExpensesBotTests */ = {
 			isa = PBXGroup;
 			children = (
+				C6B51C7F2C49BEE9000FC7FA /* Utils */,
 				C6B51C272C458369000FC7FA /* ExpensesBotTests.swift */,
+				C6B51C732C499F3E000FC7FA /* ColorRandomTests.swift */,
+				C6B51C752C499F57000FC7FA /* DateFormatterReuseTests.swift */,
+				C6B51C772C499F6D000FC7FA /* UIImageResizeTests.swift */,
+				C6B51C792C499F82000FC7FA /* ListViewModelTests.swift */,
+				C6B51C7B2C499F9F000FC7FA /* NewExpenseViewModelTests.swift */,
 			);
 			path = ExpensesBotTests;
 			sourceTree = "<group>";
@@ -189,6 +213,9 @@
 		C6B51C422C458584000FC7FA /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				C6B51C6D2C497FA7000FC7FA /* ListViewModel.swift */,
+				C6B51C6F2C4981AD000FC7FA /* NewExpenseViewModel.swift */,
+				C6B51C712C4986E9000FC7FA /* ImageSourcePickerViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -227,6 +254,14 @@
 				C6B51C652C485FB2000FC7FA /* UIImage+Resize.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C6B51C7F2C49BEE9000FC7FA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C6B51C802C49BF1B000FC7FA /* UIImage+Color.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,10 +405,13 @@
 				C6B51C152C458364000FC7FA /* ExpensesBotApp.swift in Sources */,
 				C6B51C632C466600000FC7FA /* ImageSourcePickerView.swift in Sources */,
 				C6B51C682C4871B4000FC7FA /* ListViewCell.swift in Sources */,
+				C6B51C702C4981AD000FC7FA /* NewExpenseViewModel.swift in Sources */,
 				C6B51C5F2C466479000FC7FA /* DetailView.swift in Sources */,
 				C6B51C512C45891C000FC7FA /* NewExpenseScreen.swift in Sources */,
 				C6B51C592C4596F1000FC7FA /* ListView.swift in Sources */,
+				C6B51C722C4986E9000FC7FA /* ImageSourcePickerViewModel.swift in Sources */,
 				C6B51C5B2C45A93C000FC7FA /* HomeView.swift in Sources */,
+				C6B51C6E2C497FA7000FC7FA /* ListViewModel.swift in Sources */,
 				C6B51C552C459061000FC7FA /* ExpenseModel.swift in Sources */,
 				C6B51C482C45867D000FC7FA /* RootScreen.swift in Sources */,
 				C6B51C662C485FB2000FC7FA /* UIImage+Resize.swift in Sources */,
@@ -384,6 +422,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6B51C812C49BF1B000FC7FA /* UIImage+Color.swift in Sources */,
+				C6B51C7C2C499F9F000FC7FA /* NewExpenseViewModelTests.swift in Sources */,
+				C6B51C762C499F57000FC7FA /* DateFormatterReuseTests.swift in Sources */,
+				C6B51C782C499F6D000FC7FA /* UIImageResizeTests.swift in Sources */,
+				C6B51C742C499F3E000FC7FA /* ColorRandomTests.swift in Sources */,
+				C6B51C7A2C499F82000FC7FA /* ListViewModelTests.swift in Sources */,
 				C6B51C282C458369000FC7FA /* ExpensesBotTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

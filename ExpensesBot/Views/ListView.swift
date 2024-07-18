@@ -10,22 +10,15 @@ import SwiftData
 
 struct ListView: View {
 
-    @Environment(\.isSearching) var isSearching
     @Environment(\.modelContext) private var modelContext
 
     @Query(sort: \ExpenseModel.timestamp, order: .reverse) private var items: [ExpenseModel]
 
-    @State var searchText: String = ""
+    @State var viewModel = ViewModel()
 
     var body: some View {
 
-        let items = self.items.filter {
-            if self.searchText.isEmpty == false {
-                return $0.id.uuidString.contains(self.searchText) || $0.expenseDescription.contains(self.searchText)
-            } else {
-                return true
-            }
-        }
+        let items = self.viewModel.filteredItems(items: self.items)
 
         List(items) { item in
             ListViewCell(expense: item)
@@ -35,12 +28,6 @@ struct ListView: View {
                 }
             }
         }
-        .searchable(text: $searchText)
+        .searchable(text: self.$viewModel.searchText)
     }
-
-}
-
-#Preview {
-    ListView()
-        .modelContainer(for: ExpenseModel.self, inMemory: true)
 }
