@@ -21,7 +21,7 @@ struct ListViewCell: View {
                     Image(systemName: "photo")
                 }
                 VStack {
-                    Text(DateFormatter.dateFormatter.string(from: self.expense.timestamp))
+                    Text(DateFormatter.dateFormatter.string(from: self.expense.date))
                     Text(self.expense.id.uuidString)
                         .font(.subheadline)
                         .foregroundStyle(.secondary)

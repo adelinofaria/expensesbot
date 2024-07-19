@@ -28,10 +28,11 @@ final class NewExpenseViewModelTests: XCTestCase {
 
         viewModel.id = id
         viewModel.image = image
-        viewModel.timestamp = timestamp
         viewModel.total = total
         viewModel.currency = currency
+        viewModel.date = timestamp
         viewModel.expenseDescription = expenseDescription
+        viewModel.created = timestamp
 
         viewModel.saveExpense(modelContext: container.mainContext)
 
@@ -42,9 +43,10 @@ final class NewExpenseViewModelTests: XCTestCase {
         XCTAssertEqual(expenses?.count, 1)
         XCTAssertEqual(expenses?.first?.id, id)
         XCTAssertEqual(expenses?.first?.imageData, image?.jpegData(compressionQuality: 1.0))
-        XCTAssertEqual(expenses?.first?.timestamp, timestamp)
         XCTAssertEqual(expenses?.first?.total, total)
         XCTAssertEqual(expenses?.first?.currency, currency)
+        XCTAssertEqual(expenses?.first?.date, timestamp)
         XCTAssertEqual(expenses?.first?.expenseDescription, expenseDescription)
+        XCTAssertEqual(expenses?.first?.created, timestamp)
     }
 }

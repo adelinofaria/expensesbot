@@ -57,9 +57,10 @@ extension ListViewModelTests {
     func model(description: String) -> ExpenseModel {
         ExpenseModel(id: UUID(),
                      imageData: Data(),
-                     timestamp: .now,
                      total: 123,
                      currency: "USD",
-                     expenseDescription: description)
+                     date: .now,
+                     expenseDescription: description,
+                     created: .now)
     }
 }

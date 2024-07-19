@@ -13,7 +13,7 @@ struct HomeView: View {
 
     @Environment(\.modelContext) private var modelContext
 
-    @Query(sort: \ExpenseModel.timestamp, order: .reverse) private var items: [ExpenseModel]
+    @Query(sort: \ExpenseModel.created, order: .reverse) private var items: [ExpenseModel]
 
     @State private var newExpenseScreenIsPresented = false
 

@@ -13,10 +13,11 @@ import SwiftData
 final class ExpenseModel {
     @Attribute(.unique) var id: UUID
     @Attribute(.externalStorage) var imageData: Data
-    var timestamp: Date
     var total: Double
     var currency: String
+    var date: Date
     var expenseDescription: String
+    var created: Date
 
     @Transient
     var image: UIImage? {
@@ -34,15 +35,17 @@ final class ExpenseModel {
 
     init(id: UUID,
          imageData: Data,
-         timestamp: Date,
          total: Double,
          currency: String,
-         expenseDescription: String) {
+         date: Date,
+         expenseDescription: String,
+         created: Date) {
         self.id = id
         self.imageData = imageData
-        self.timestamp = timestamp
         self.total = total
         self.currency = currency
+        self.date = date
         self.expenseDescription = expenseDescription
+        self.created = created
     }
 }

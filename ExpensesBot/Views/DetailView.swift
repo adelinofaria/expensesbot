@@ -31,10 +31,15 @@ struct DetailView: View {
                     .bold()
                 Text(self.expense.expenseDescription)
                 Spacer()
+                Text("Date")
+                    .bold()
+                Text(DateFormatter.dateFormatter.string(from: self.expense.date))
+                Spacer()
+                Spacer()
                 Text("Info")
                     .bold()
                 Text(self.expense.id.uuidString)
-                Text(self.expense.timestamp.description)
+                Text(self.expense.created.description)
             }
         }
     }

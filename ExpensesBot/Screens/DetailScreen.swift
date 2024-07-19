@@ -12,6 +12,6 @@ struct DetailScreen: View {
 
     var body: some View {
         DetailView(expense: self.expense)
-            .navigationTitle(DateFormatter.dateFormatter.string(from: self.expense.timestamp))
+            .navigationTitle(DateFormatter.dateFormatter.string(from: self.expense.date))
     }
 }

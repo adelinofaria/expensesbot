@@ -56,6 +56,9 @@ struct NewExpenseView: View {
                 Text("Total value")
             }
             Section {
+                DatePicker("Date",
+                           selection: self.$viewModel.date,
+                           in: ...Date.now, displayedComponents: [.date, .hourAndMinute])
                 ZStack(alignment: .leading) {
                     if self.viewModel.expenseDescription.isEmpty {
                         Text("Enter description")
@@ -69,7 +72,7 @@ struct NewExpenseView: View {
             }
             Section {
                 LabeledContent("id", value: self.viewModel.id.uuidString)
-                LabeledContent("Timestamp", value: self.viewModel.timestamp.description)
+                LabeledContent("Timestamp", value: self.viewModel.created.description)
             } header: {
                 Text("Generated")
             }

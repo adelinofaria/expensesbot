@@ -12,7 +12,7 @@ struct ListView: View {
 
     @Environment(\.modelContext) private var modelContext
 
-    @Query(sort: \ExpenseModel.timestamp, order: .reverse) private var items: [ExpenseModel]
+    @Query(sort: \ExpenseModel.created, order: .reverse) private var items: [ExpenseModel]
 
     @State var viewModel = ViewModel()
 

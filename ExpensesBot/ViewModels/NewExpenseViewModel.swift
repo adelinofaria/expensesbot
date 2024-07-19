@@ -17,10 +17,11 @@ extension NewExpenseView {
         var image: UIImage?
 
         var id: UUID = .init()
-        var timestamp: Date = .now
         var total: Double? = nil
         var currency: String = Locale.current.currency?.identifier ?? "USD"
+        var date: Date = .now
         var expenseDescription: String = ""
+        var created: Date = .now
 
         func saveExpense(modelContext: ModelContext) {
 
@@ -29,10 +30,11 @@ extension NewExpenseView {
 
                 let model = ExpenseModel(id: self.id,
                                          imageData: imageData,
-                                         timestamp: self.timestamp,
                                          total: total,
                                          currency: self.currency,
-                                         expenseDescription: self.expenseDescription)
+                                         date: self.date,
+                                         expenseDescription: self.expenseDescription,
+                                         created: self.created)
 
                 modelContext.insert(model)
             }

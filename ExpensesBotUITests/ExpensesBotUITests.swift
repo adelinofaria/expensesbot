@@ -67,7 +67,7 @@ final class ExpensesBotUITests: XCTestCase {
         totalValue.typeText("\n")
 
         // get generated UUID
-        let uuidCell = app.collectionViews.cells.element(boundBy: 7)
+        let uuidCell = app.collectionViews.cells.element(boundBy: 8)
         let uuidLabel = uuidCell.staticTexts.element(boundBy: 1).label
         let uuid = String(uuidLabel.dropFirst("id, ".count))
 
@@ -86,7 +86,7 @@ final class ExpensesBotUITests: XCTestCase {
 
         firstCell.tap()
 
-        let uuidStaticString = app.scrollViews.staticTexts.element(boundBy: 5).label
+        let uuidStaticString = app.scrollViews.staticTexts.element(boundBy: 7).label
 
         XCTAssertEqual(uuidStaticString, uuid)
     }
