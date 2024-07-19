@@ -22,12 +22,73 @@ final class ExpensesBotUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
+    func testGoldenPath() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
+        app.launchEnvironment["TESTING"] = "true"
         app.launch()
 
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let homeTab = app.tabBars.buttons["Home"]
+        let historyTab = app.tabBars.buttons["History"]
+
+        historyTab.tap()
+
+        XCTAssertEqual(app.collectionViews.cells.count, 0)
+
+        homeTab.tap()
+
+        let addExpense = app.buttons["New Expense"]
+
+        addExpense.tap()
+
+        let listCells = app.collectionViews.cells
+
+        // Tap Image cell
+        let imageCell = listCells.firstMatch
+        
+        imageCell.tap()
+
+        // Select photo library souce
+        let photoLibraryButton = app.buttons["Photo library"]
+
+        photoLibraryButton.tap()
+
+        // Select first photo
+        let firstImage = app.images.element(boundBy: 4)
+
+        _ = firstImage.waitForExistence(timeout: 30)
+        firstImage.tap()
+
+        // Write total expense
+        let totalValue = app.collectionViews.cells.element(boundBy: 2).textFields.firstMatch
+
+        totalValue.tap()
+        totalValue.typeText("123,123")
+        totalValue.typeText("\n")
+
+        // get generated UUID
+        let uuidCell = app.collectionViews.cells.element(boundBy: 7)
+        let uuidLabel = uuidCell.staticTexts.element(boundBy: 1).label
+        let uuid = String(uuidLabel.dropFirst("id, ".count))
+
+        // add expense
+        let doneButton = app.buttons["Done"]
+
+        doneButton.tap()
+
+        // check history
+        historyTab.tap()
+
+        XCTAssertEqual(app.collectionViews.cells.count, 1)
+
+        // navigate to detail
+        let firstCell = app.collectionViews.cells.firstMatch
+
+        firstCell.tap()
+
+        let uuidStaticString = app.scrollViews.staticTexts.element(boundBy: 5).label
+
+        XCTAssertEqual(uuidStaticString, uuid)
     }
 
     func testLaunchPerformance() throws {

@@ -10,11 +10,20 @@ import SwiftData
 
 @main
 struct ExpensesBotApp: App {
+
+#if DEBUG
+    static let isStoredInMemoryOnly = {
+        return ProcessInfo.processInfo.environment["TESTING"] == "true"
+    }()
+#else
+    static let isStoredInMemoryOnly = false
+#endif
+
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             ExpenseModel.self,
         ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
+        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: isStoredInMemoryOnly)
 
         do {
             return try ModelContainer(for: schema, configurations: [modelConfiguration])

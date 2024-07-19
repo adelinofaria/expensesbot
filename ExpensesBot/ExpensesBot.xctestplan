@@ -1,0 +1,31 @@
+{
+  "configurations" : [
+    {
+      "id" : "0E650AE2-8123-425E-8CBF-0AFB7F7AFC26",
+      "name" : "Configuration",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:ExpensesBot.xcodeproj",
+        "identifier" : "C6B51C222C458369000FC7FA",
+        "name" : "ExpensesBotTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:ExpensesBot.xcodeproj",
+        "identifier" : "C6B51C2C2C458369000FC7FA",
+        "name" : "ExpensesBotUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

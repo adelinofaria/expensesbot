@@ -97,6 +97,7 @@
 		C6B51C792C499F82000FC7FA /* ListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelTests.swift; sourceTree = "<group>"; };
 		C6B51C7B2C499F9F000FC7FA /* NewExpenseViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExpenseViewModelTests.swift; sourceTree = "<group>"; };
 		C6B51C802C49BF1B000FC7FA /* UIImage+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
+		C6B51C832C4A995F000FC7FA /* ExpensesBot.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = ExpensesBot.xctestplan; path = ExpensesBot/ExpensesBot.xctestplan; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +240,7 @@
 			children = (
 				C6B51C1A2C458368000FC7FA /* Assets.xcassets */,
 				C6B51C562C459590000FC7FA /* ExpensesBot.entitlements */,
+				C6B51C832C4A995F000FC7FA /* ExpensesBot.xctestplan */,
 				C6B51C572C4595CB000FC7FA /* Info.plist */,
 				C6B51C452C4585FE000FC7FA /* Localizable.xcstrings */,
 				C6B51C492C4586BD000FC7FA /* README.md */,
