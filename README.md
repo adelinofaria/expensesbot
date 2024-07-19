@@ -1,12 +1,11 @@
 # ExpensesBot iOS
 Keep track of your expenses with this cutting edge, rocket science, web3, blockchain technology - nah just an iOS app fren
 
-
-Requirements:
-- Take photos of my expenses (receipts or invoices).
-- Add information about the receipt (date, total, currency, etc) and store it locally
-- Access the history of the photos taken (should be available offline) with the data I
-inputted
-- The app should work even if you are offline and should maintain its state after closing
-- The solution must be thread safe and should be robust enough to handle large sets
-of data.
+## Implementation details
+- MVVM architecture
+- All UI implemented using SwiftUI (only caveat is UIKit's UIImagePickerController at CameraView using UIViewControllerRepresentable)
+- Storage using SwiftData
+- Some ViewModels were suppressed since there wasn’t value/code to be isolated
+- Focused UX on functionality and utility
+- Implemented tests on code that we have ownership (meaning. we don't want to test SwiftUI, SwiftData)
+- A single UI test added for the golden path of the app - Expense creation, listing, details
